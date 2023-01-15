@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/Layout.astro";
+import styles from "./index.module.scss";
+---
+
+<Layout title="Davi Patricio - Full Stack Developer">
+  <main>
+    <div class={styles.container}>
+      <section class={styles.heroimg}>
+        <img src="/icon.jfif" alt="Davi Patricio" draggable="false" />
+      </section>
+
+      <section class={styles.herodescription}>
+        <div><h1>Davi Patricio</h1></div>
+        <div class={styles.heroabout}>
+          <i>🇧🇷</i>
+          <p>
+            Full Stack Developer, <span class="age">17</span> years old.
+          </p>
+        </div>
+      </section>
+
+      <section class={styles.herobuttons}>
+        <div>
+          <a
+            href="https://github.com/davipatricio"
+            target="_blank"
+            draggable="false"
+          >
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a
+            href="https://open.spotify.com/user/tw87f1plxzpizvo93kywz40g2"
+            target="_blank"
+            draggable="false"
+          >
+            <i class="fa-brands fa-spotify"></i>
+            <span>Spotify</span>
+          </a>
+          <a
+            href="https://twitter.com/vericpatricio"
+            target="_blank"
+            draggable="false"
+          >
+            <i class="fa-brands fa-twitter"></i>
+            <span>Twitter</span>
+          </a>
+          <a
+            href="https://instagram.com/davipatricio.sh"
+            target="_blank"
+            draggable="false"
+          >
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+        </div>
+      </section>
+
+      <footer class={styles.herofooter}>
+        <p>Davi Patricio - <span class="year">2023</span></p>
+      </footer>
+    </div>
+  </main>
+</Layout>
+
+<!-- Automatically update the age and the year -->
+<script lang="js">
+  twemoji.parse(document.body, {
+    base: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/",
+  });
+
+  const age = document.querySelector(".age");
+  const year = document.querySelector(".year");
+
+  const date = new Date();
+  const birth = 2006;
+  const currentYear = date.getFullYear();
+
+  age.innerHTML = `${currentYear - birth}`;
+  year.innerHTML = `${currentYear}`;
+</script>

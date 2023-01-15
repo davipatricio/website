@@ -1,0 +1,39 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <script
+      src="https://kit.fontawesome.com/bc4ebe8f4a.js"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js"
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f4bb.png" type="image/png" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style lang="sass" is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500;600;700&display=swap")
+
+  *
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: "Sofia Sans", sans-serif
+</style>

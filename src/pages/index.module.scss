@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  background-color: #181a1b;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+
+  .heroimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 24px;
+
+    img {
+      height: 128px;
+      width: 128px;
+
+      border-radius: 50%;
+
+      @media (max-width: 512px) {
+        height: 90px;
+        width: 90px;
+      }
+    }
+  }
+
+  .herodescription {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-top: 12px;
+    font-size: 1.5rem;
+    color: white;
+
+    h1 {
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .heroabout {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      // Center the image with the paragraph
+      i {
+        width: 25px;
+        height: 25px;
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      p {
+        text-align: center;
+        font-weight: 200;
+        margin: 5px;
+        margin-top: 6px;
+        font-family: "Inter", sans-serif;
+        font-size: 1.1rem;
+        height: 20px;
+
+        span {
+          font-weight: 200;
+          font-family: "Inter", sans-serif;
+        }
+      }
+    }
+  }
+
+  .herobuttons {
+    margin-top: 12px;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    a {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+      font-size: 1.1rem;
+
+      background-color: white;
+
+      border-radius: 50px;
+      width: 85vw;
+      max-width: 400px;
+      height: 50px;
+
+      transition: 0.2s;
+      i {
+        font-size: 1.5rem;
+        margin-right: 12px;
+      }
+
+      &:hover {
+        background-color: #ccc;
+        scale: 1.1;
+        transition: 0.2s;
+      }
+    }
+  }
+
+  .herofooter {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    p {
+      margin-top: 32px;
+      margin-bottom: 32px;
+      color: grey;
+    }
+  }
+}
